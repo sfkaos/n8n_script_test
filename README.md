@@ -1,4 +1,3 @@
-````markdown
 # 🧪 n8n Technical Challenge: Scrape LinkedIn for Account Managers at Deloitte
 
 ## 📍 Overview
@@ -25,7 +24,6 @@ Build an **n8n workflow** that performs the following steps:
      "company": "Deloitte"
    }
    ```
-````
 
 2. **Login with Puppeteer**
    Uses Puppeteer (inside an `Execute Command` node or external script) to:
