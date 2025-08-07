@@ -1,13 +1,7 @@
-Here’s a polished `README.md` you can drop into a GitHub repo for your **n8n + Puppeteer LinkedIn scraping challenge**:
-
----
-
 ````markdown
 # 🧪 n8n Technical Challenge: Scrape LinkedIn for Account Managers at Deloitte
 
 ## 📍 Overview
-
-This challenge is part of a hiring process for automation and scripting experts who will help build advanced n8n workflows for a hospitality company. It focuses on web automation using Puppeteer inside n8n.
 
 The goal is to demonstrate your ability to:
 
