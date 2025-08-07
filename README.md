@@ -28,7 +28,7 @@ Build an **n8n workflow** that performs the following steps:
 2. **Login with Puppeteer**
    Uses Puppeteer (inside an `Execute Command` node or external script) to:
 
-   - Open a headless browser
+   - Open a headless browser (using a free account at Browserless.io)
    - Navigate to [https://www.linkedin.com/login](https://www.linkedin.com/login)
    - Log in with the credentials provided
 
