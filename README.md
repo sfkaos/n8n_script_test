@@ -14,53 +14,59 @@ The goal is to demonstrate your ability to:
 
 Build an **n8n workflow** that performs the following steps:
 
-1. **Webhook Input**  
-   Starts with a `Webhook` node that accepts a POST request with:
+1. **Webhook Input**
 
-   ```json
-   {
-     "email": "your-linkedin-email@example.com",
-     "password": "your-linkedin-password",
-     "company": "Deloitte"
-   }
-   ```
+Starts with a `Webhook` node that accepts a POST request with:
+
+```json
+{
+  "email": "your-linkedin-email@example.com",
+  "password": "your-linkedin-password",
+  "company": "Deloitte"
+}
+```
 
 2. **Login with Puppeteer**
-   Uses Puppeteer (inside an `Execute Command` node or external script) to:
 
-   - Open a headless browser (using a free account at [Browserless.io](https://www.browserless.io))
-   - Navigate to [https://www.linkedin.com/login](https://www.linkedin.com/login)
-   - Log in with the credentials provided
+Uses Puppeteer (inside an `Execute Command` node or external script) to:
+
+- Open a headless browser (using a free account at [Browserless.io](https://www.browserless.io))
+  - [Browserless documentation](https://docs.browserless.io/baas/start)
+- Navigate to [https://www.linkedin.com/login](https://www.linkedin.com/login)
+- Log in with the credentials provided
 
 3. **Search LinkedIn**
-   After successful login, perform a search on LinkedIn for:
 
-   ```
-   account manager Deloitte
-   ```
+After successful login, perform a search on LinkedIn for:
 
-   Navigate to the “People” tab of the results.
+```
+account manager Deloitte
+```
+
+Navigate to the “People” tab of the results.
 
 4. **Scrape Results**
-   Extract the **first 10 people** in the search results, collecting:
 
-   - Full Name
-   - Headline (e.g., "Account Director at Deloitte")
-   - Profile URL
+Extract the **first 10 people** in the search results, collecting:
+
+- Full Name
+- Headline (e.g., "Account Director at Deloitte")
+- Profile URL
 
 5. **Return JSON**
-   Return the scraped data back through the webhook as a structured JSON array like:
 
-   ```json
-   [
-     {
-       "name": "Jane Doe",
-       "headline": "Senior Account Manager at Deloitte",
-       "profileUrl": "https://www.linkedin.com/in/janedoe/"
-     },
-     ...
-   ]
-   ```
+Return the scraped data back through the webhook as a structured JSON array like:
+
+```json
+[
+  {
+    "name": "Jane Doe",
+    "headline": "Senior Account Manager at Deloitte",
+    "profileUrl": "https://www.linkedin.com/in/janedoe/"
+  },
+  ...
+]
+```
 
 ---
 
